@@ -1,0 +1,13 @@
+D:\itra\3\RPS\RPS\bin\Debug\netcoreapp3.1\RPS.exe
+D:\itra\3\RPS\RPS\bin\Debug\netcoreapp3.1\RPS.deps.json
+D:\itra\3\RPS\RPS\bin\Debug\netcoreapp3.1\RPS.runtimeconfig.json
+D:\itra\3\RPS\RPS\bin\Debug\netcoreapp3.1\RPS.runtimeconfig.dev.json
+D:\itra\3\RPS\RPS\bin\Debug\netcoreapp3.1\RPS.dll
+D:\itra\3\RPS\RPS\bin\Debug\netcoreapp3.1\RPS.pdb
+D:\itra\3\RPS\RPS\obj\Debug\netcoreapp3.1\RPS.csprojAssemblyReference.cache
+D:\itra\3\RPS\RPS\obj\Debug\netcoreapp3.1\RPS.AssemblyInfoInputs.cache
+D:\itra\3\RPS\RPS\obj\Debug\netcoreapp3.1\RPS.AssemblyInfo.cs
+D:\itra\3\RPS\RPS\obj\Debug\netcoreapp3.1\RPS.csproj.CoreCompileInputs.cache
+D:\itra\3\RPS\RPS\obj\Debug\netcoreapp3.1\RPS.dll
+D:\itra\3\RPS\RPS\obj\Debug\netcoreapp3.1\RPS.pdb
+D:\itra\3\RPS\RPS\obj\Debug\netcoreapp3.1\RPS.genruntimeconfig.cache
