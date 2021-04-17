@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> userManager
+@if (userManager.GetUserAsync(User).Result != null && userManager.GetUserAsync(User).Result.Status != "Blocked")
+{
+    <form method="post">
+        <div class="btn-toolbar">
+            <button asp-controller="Home" asp-action="BlockUser" name="btn" value="block" class="btn bg-warning">Block</button>
+            <button asp-controller="Home" asp-action="UnblockUser" name="btn" value="unblock" class="btn bg-success"><i class="fa fa-unlock-alt"></i></button>
+            <button asp-controller="Home" asp-action="DeleteUser" name="btn" value="delete" class="btn bg-danger"><i class="fa fa-trash"></i></button>
+        </div>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox">
+                        <span class="offset-1">All</span>
+                    </th>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Registration</th>
+                    <th>Last log in</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in userManager.Users.ToList().OrderBy(u => u.LoginDate))
+                {
+                    <tr>
+                        <th>
+                            <input type="checkbox" name="selectedUsers" id="@user.Id" value="@user.Id" />
+                        </th>
+                        <th>@user.Id</th>
+                        <th>@user.UserName</th>
+                        <th>@user.Email</th>
+                        <th>@user.RegisterDate.ConvertTime(Context)</th>
+                        <th>@user.LoginDate.ConvertTime(Context)</th>
+                        <th>@user.Status</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+        
+    <script>$('.table').checkboxTable();</script>
+}
+
